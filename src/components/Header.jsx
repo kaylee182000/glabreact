@@ -1,12 +1,19 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
 export default class Header extends Component {
   render() {
+
     return (
-      <div className='container'>
-          <h1 className='text-center fw-bold fs-2 p-3'>G <img style={{width: "3%"}} src="./img/j1.png" alt="" /> LAB</h1>
-          
-      </div>
-    )
+      <header className="container mt-5 mb-4">
+        <div className="bars">
+          <a href="#">
+            <i className="fa-solid fa-bars text-dark fs-2" />
+          </a>
+        </div>
+        <h1 className="text-center fw-bold fs-2">
+          G <img style={{ width: "3%" }} src="./img/j1.png" alt="" /> LAB
+        </h1>
+      </header>
+    );
   }
 }
