@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,21 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+a{
+  text-decoration: none;
+}
+li{
+  margin-bottom: 10px;
+}
+li a{
+  color: lightgray;
+  font-size: 13px;
+}
+li a:hover{
+  color: white;
+}
+input:focus{
+  color: white;
 }
