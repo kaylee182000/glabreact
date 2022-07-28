@@ -5,7 +5,7 @@ export default class Footer extends Component {
     return (
       <footer className="bg-dark">
         <div className="container p-4">
-          <p className="text-white text-center fs-3 fw-bold">G-LAB</p>
+          <p className="text-white text-center fs-3 fw-bold">K-LAB</p>
           <div className="d-flex justify-content-center align-items-center mt-5">
             <i className="fa-solid fa-envelope text-white me-2 fs-4" />
             <input

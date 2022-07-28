@@ -11,7 +11,7 @@ export default class Header extends Component {
           </a>
         </div>
         <h1 className="text-center fw-bold fs-2">
-          G <img style={{ width: "3%" }} src="./img/j1.png" alt="" /> LAB
+          K <img style={{ width: "3%" }} src="./img/j1.png" alt="" /> LAB
         </h1>
       </header>
     );
