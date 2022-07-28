@@ -2,13 +2,21 @@ import React, { Component } from "react";
 
 export default class ProductItem extends Component {
   render() {
-    let { product } = this.props;
+    let { product, showDetail } = this.props;
     return (
       <div className="card border border-white p-3">
         {/* <img src={product.image} alt="..." /> */}
-        <input type="image" src={product.image} alt="..." onClick={() => {
-            return alert("helo")
-        }} />
+        <input
+          type="image"
+          src={product.image}
+          alt="..."
+          data-bs-toggle="modal"
+          data-bs-target="#modelId"
+          onClick={() => {
+            showDetail(product);
+            // showComponent()
+          }}
+        />
         <div className="card-body">
           <h5 className="text-center fs-4">{product.name}</h5>
           <p className="text-center text-secondary">{product.price} $</p>

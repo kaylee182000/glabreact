@@ -145,10 +145,15 @@ const data = [
 ];
 export default class ProductList extends Component {
   renderItem = () => {
+    let { showDetail } = this.props;
     return data.map((prod, index) => {
       return (
         <div className="col-lg-4 col-md-6 col-12 mt-4" key={index}>
-          <ProductItem product={prod} />
+          <ProductItem
+            product={prod}
+            showDetail={showDetail}
+            // showComponent={showComponent}
+          />
         </div>
       );
     });

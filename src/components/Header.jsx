@@ -6,7 +6,7 @@ export default class Header extends Component {
     return (
       <header className="container mt-5 mb-4">
         <div className="bars">
-          <a href="#">
+          <a href="./App.js">
             <i className="fa-solid fa-bars text-dark fs-2" />
           </a>
         </div>
