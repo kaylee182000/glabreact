@@ -1,11 +1,12 @@
 import React, { Component } from "react";
 
+// import Detail from "./Detail";
+
 export default class ProductItem extends Component {
   render() {
     let { product, showDetail } = this.props;
     return (
       <div className="card border border-white p-3">
-        {/* <img src={product.image} alt="..." /> */}
         <input
           type="image"
           src={product.image}
