@@ -85,10 +85,10 @@ export default function Login() {
                   <button className="btn rounded-pill btn-login">Login</button>
                 </div>
               </div>
-              <NavLink className="btn w-100 mt-3 btn-fb">
+              {/* <NavLink className="btn w-100 mt-3 btn-fb">
                 <i className="fa-brands fa-facebook"></i>
                 Continue with Facebook
-              </NavLink>
+              </NavLink> */}
             </form>
           </div>
           <div className="col-4"></div>
