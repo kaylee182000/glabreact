@@ -1,0 +1,63 @@
+@import "../Base/base";
+@import "../Theme/variable";
+@import "./header";
+@import "./footer";
+//-----------------------------------
+.cart {
+  h3.title {
+    @include text($text-lg, $text-medium, $text-cl-prim);
+  }
+  .cart-content {
+    .table-responsive {
+      .table {
+        thead {
+          tr {
+            background-color: $bg-cl-sp5;
+            @include text($text-base, $text-medium, $text-cl-prim);
+          }
+        }
+        tbody {
+          tr {
+            td {
+              transition: all 0.3s;
+              @include text($text-base, $text-medium, $text-cl-prim);
+              .btn-upDown {
+                @include button(
+                  $btn-cl-5,
+                  6px 15px,
+                  none,
+                  $text-sm,
+                  $text-medium,
+                  $text-cl-sec,
+                  $btn-cl-7,
+                  $text-cl-sec
+                );
+                transition: all 0.5s;
+              }
+              span.count {
+                display: inline-block;
+                min-width: 80px;
+                background-color: $bg-cl-sp5;
+              }
+              &.totalPrice {
+                min-width: 105px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .btn-submitOrder {
+      @include button(
+        $btn-cl-8,
+        6px 15px,
+        none,
+        $text-sm,
+        $text-medium,
+        $text-cl-sec,
+        $btn-cl-9,
+        $text-cl-sec
+      );
+    }
+  }
+}

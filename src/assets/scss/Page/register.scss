@@ -1,0 +1,69 @@
+@import "../Base/base";
+@import "../Theme/variable";
+@import "./header";
+@import "./footer";
+//------------------------------------
+.register {
+  padding-bottom: 100px;
+  h3 {
+    @include text($text-lg, $text-medium, $text-cl-prim);
+  }
+  form {
+    position: relative;
+    .row {
+      .form-items {
+        input {
+          &.form-control {
+            border-bottom: 5px solid $bd-cl-1;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-radius: 0;
+            padding: 15px 15px 15px 0;
+            @include text($text-l, $text-medium, $text-cl-prim);
+            &:focus {
+              box-shadow: none;
+            }
+          }
+          &::placeholder {
+            @include text($text-l, $text-medium, $text-cl-prim);
+            opacity: 0.5;
+          }
+        }
+      }
+      .ant-radio-wrapper {
+        .ant-radio {
+          .ant-radio-inner {
+            width: 25px;
+            height: 25px;
+            &.ant-radio-checked::after {
+              width: 18px;
+              height: 18px;
+            }
+          }
+        }
+        span.ant-radio + * {
+          @include text($text-sm, $text-medium, $text-cl-sp2);
+          transform: translateY(-5px);
+        }
+      }
+    }
+    button {
+      transition: all 0.5s;
+      margin-top: 25px;
+      margin-left: 10px;
+      // position: absolute;
+      // left: 51.5%;
+      @include button(
+        $btn-cl-4,
+        5px 60px,
+        none,
+        $text-l,
+        $text-medium,
+        $text-cl-sec,
+        $btn-cl-1,
+        $text-cl-prim
+      );
+    }
+  }
+}

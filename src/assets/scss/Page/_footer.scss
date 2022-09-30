@@ -1,0 +1,36 @@
+.footer {
+  .line {
+    .row {
+      .col-md-4.col-6 {
+        .title {
+          h4 {
+            @include text($text-md, $text-bold, $text-cl-prim);
+          }
+        }
+        .info {
+          a,
+          p {
+            @include text($text-sm, $text-light, $text-cl-prim);
+          }
+          a {
+            transition: all 0.5s;
+            &:hover {
+              @include text($text-sm, $text-light, $text-cl-a);
+            }
+            &.other-link {
+              @include text($text-sm, $text-light, $text-cl-a2);
+              &:hover {
+                @include text($text-sm, $text-light, $text-cl-a);
+              }
+            }
+          }
+        }
+      }
+    }
+    &.line-2 {
+      padding: 30px 0;
+      margin-top: 30px;
+      background-color: $bg-cl-sp2;
+    }
+  }
+}

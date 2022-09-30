@@ -1,0 +1,48 @@
+@import "../Base/base";
+@import "../Theme/variable";
+@import "./header";
+@import "./footer";
+.product-feature {
+  padding-top: 25px;
+  .row {
+    margin-top: 50px;
+    .relate-main-part {
+      .card {
+        background-color: $bg-cl-sp4;
+        .card-top {
+          padding: 20px;
+        }
+        .card-body {
+          padding: 20px;
+          .card-title {
+            height: 60px;
+            @include text($text-md, $text-medium, $text-cl-prim);
+          }
+          .card-text {
+            @include text($text-base, $text-light, $text-cl-ghost);
+          }
+        }
+        .card-footer {
+          padding: 0;
+          background-color: $bg-cl-sp2;
+          .btnBuy {
+            transition: all 0.5s;
+            @include button(
+              $btn-cl-1,
+              15px 25px,
+              none,
+              $text-base,
+              $text-light,
+              $text-cl-sec,
+              $btn-cl-3,
+              $text-cl-prim
+            );
+          }
+          .price {
+            @include text($text-md, $text-bold, $text-cl-prim);
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,119 @@
+@import "../Base/base";
+@import "../Theme/variable";
+@import "./header";
+@import "./footer";
+//------------------------------------------
+.search {
+  .input-area {
+    form {
+      .form-group {
+        p {
+          @include text($text-base, $text-medium, $text-cl-sp2);
+        }
+        input {
+          transform: translateY(-px);
+          &.form-control {
+            border-bottom: none;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-radius: 0;
+            padding: 16px 12px 14px 14px;
+            background: rgba(33, 33, 33, 0.08);
+            @include text($text-sm, $text-medium, $text-cl-prim);
+
+            &:focus {
+              box-shadow: none;
+            }
+          }
+
+          &::placeholder {
+            @include text($text-sm, $text-medium, $text-cl-sp3);
+            opacity: 0.5;
+          }
+        }
+        .btn-search {
+          @include button(
+            $btn-cl-5,
+            15px 25px,
+            none,
+            $text-sm,
+            $text-medium,
+            $text-cl-sec,
+            $btn-cl-7,
+            $text-cl-sec
+          );
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+  .result-area {
+    h3.title {
+      padding: 12px 25px;
+      background: linear-gradient(180deg, #f21299 0%, #1b02b5 100%);
+      @include text($text-lg, $text-medium, $text-cl-sec);
+    }
+    p {
+      @include text($text-base, $text-medium, $text-cl-sp2);
+    }
+    button.btn-sort {
+      text-align: left;
+      background: $btn-cl-10;
+      margin-bottom: 5px;
+      @include text($text-sm, $text-medium, $text-cl-sp3);
+      &:hover {
+        @include text($text-sm, $text-medium, $text-cl-sp4);
+      }
+    }
+    .product-result {
+      margin-top: 50px;
+
+      .product-main-part {
+        .card {
+          background-color: $bg-cl-sp4;
+
+          .card-top {
+            padding: 20px;
+          }
+
+          .card-body {
+            padding: 20px;
+
+            .card-title {
+              height: 60px;
+              @include text($text-md, $text-medium, $text-cl-prim);
+            }
+
+            .card-text {
+              @include text($text-base, $text-light, $text-cl-ghost);
+            }
+          }
+
+          .card-footer {
+            padding: 0;
+            background-color: $bg-cl-sp2;
+
+            .btnBuy {
+              transition: all 0.5s;
+              @include button(
+                $btn-cl-1,
+                15px 25px,
+                none,
+                $text-base,
+                $text-light,
+                $text-cl-sec,
+                $btn-cl-3,
+                $text-cl-prim
+              );
+            }
+
+            .price {
+              @include text($text-md, $text-bold, $text-cl-prim);
+            }
+          }
+        }
+      }
+    }
+  }
+}

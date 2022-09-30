@@ -1,0 +1,73 @@
+@import "../Base/base";
+@import "../Theme/variable";
+@import "./header";
+@import "./footer";
+//------------------------------------
+.login {
+  .container {
+    .title {
+      h3 {
+        @include text($text-lg, $text-medium, $text-cl-prim);
+      }
+    }
+    .row {
+      form {
+        .form-group {
+          p {
+            @include text($text-base, $text-medium, $text-cl-sp2);
+          }
+          input {
+            transform: translateY(-px);
+            &.form-control {
+              border-bottom: none;
+              border-top: none;
+              border-left: none;
+              border-right: none;
+              border-radius: 0;
+              padding: 16px 12px 14px 14px;
+              background: rgba(33, 33, 33, 0.08);
+              @include text($text-sm, $text-medium, $text-cl-prim);
+
+              &:focus {
+                box-shadow: none;
+              }
+            }
+
+            &::placeholder {
+              @include text($text-sm, $text-medium, $text-cl-sp3);
+              opacity: 0.5;
+            }
+          }
+        }
+        .row {
+          .btn-login {
+            @include button(
+              $btn-cl-5,
+              12px 25px,
+              none,
+              $text-sm,
+              $text-medium,
+              $text-cl-sec,
+              $btn-cl-1,
+              $text-cl-prim
+            );
+            text-transform: uppercase;
+          }
+        }
+        .btn-fb {
+          @include button(
+            $btn-cl-6,
+            12px 25px,
+            none,
+            $text-base,
+            $text-medium,
+            $text-cl-sec,
+            $btn-cl-6,
+            $text-cl-sec
+          );
+          border-radius: 21px;
+        }
+      }
+    }
+  }
+}

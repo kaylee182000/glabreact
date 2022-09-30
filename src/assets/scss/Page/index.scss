@@ -1,0 +1,132 @@
+@import "../Base/base";
+@import "../Theme/variable";
+@import "./header";
+@import "./footer";
+/**----------------------------------------------**/
+.carousel {
+  background-image: url("../../img/image\ 6.png");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 25px;
+  height: 600px;
+  overflow: hidden;
+  @media screen and (max-width: 992px) {
+    height: 750px;
+  }
+  .slick-slider {
+    .slick-prev {
+      background-image: url("../../img/Polygon\ 2.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 45.71px;
+      &::before {
+        content: "";
+      }
+    }
+    .slick-next {
+      background-image: url("../../img/Polygon\ 1.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 45.71px;
+      &::before {
+        content: "";
+      }
+    }
+  }
+  .carousel-content {
+    @media screen and (min-width: 768px) and (max-width: 992px) {
+      transform: translateX(75px);
+    }
+    .slick-item {
+      .carousel-left {
+        img {
+          height: 450px;
+          @media screen and (max-width: 992px) {
+            height: 400px;
+          }
+        }
+      }
+      .carousel-right {
+        .shoe-info {
+          .shoe-name {
+            @include text($text-lg, $text-light, $text-cl-prim);
+          }
+          .shoe-description {
+            @include text($text-base, $text-light, $text-cl-prim);
+          }
+          a.btnBuy {
+            transition: all 0.5s;
+            display: inline-block;
+            margin-top: 15px;
+            @include button(
+              $btn-cl-1,
+              15px 25px,
+              none,
+              $text-base,
+              $text-light,
+              $text-cl-sec,
+              $btn-cl-2,
+              $text-cl-prim
+            );
+          }
+        }
+      }
+    }
+  }
+}
+.product-feature {
+  .title {
+    width: 60%;
+    padding: 10px 25px;
+    background: linear-gradient(180deg, #f21299 0%, #1b02b5 100%);
+  }
+  padding-top: 25px;
+  .row {
+    margin-top: 50px;
+    .product-main-part {
+      .card {
+        background-color: $bg-cl-sp4;
+        .card-top {
+          padding: 20px;
+          img {
+            height: 250px;
+            @media screen and (max-width: 770px) {
+              height: auto;
+            }
+          }
+        }
+        .card-body {
+          padding: 20px;
+          .card-title {
+            height: 60px;
+            @include text($text-md, $text-medium, $text-cl-prim);
+          }
+          .card-text {
+            @include text($text-base, $text-light, $text-cl-ghost);
+          }
+        }
+        .card-footer {
+          padding: 0;
+          background-color: $bg-cl-sp2;
+          .btnBuy {
+            transition: all 0.5s;
+            @include button(
+              $btn-cl-1,
+              15px 25px,
+              none,
+              $text-base,
+              $text-light,
+              $text-cl-sec,
+              $btn-cl-3,
+              $text-cl-prim
+            );
+          }
+          .price {
+            @include text($text-md, $text-bold, $text-cl-prim);
+          }
+        }
+      }
+    }
+  }
+}

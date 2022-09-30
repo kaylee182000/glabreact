@@ -1,0 +1,65 @@
+// font size
+$text-sm: 16px;
+$text-base: 20px;
+$text-md: 24px;
+$text-l: 32px;
+$text-lg: 40px;
+// font weight
+$text-light: 300;
+$text-medium: 400;
+$text-bold: 700;
+// text color
+$text-cl-ghost: #cbc9c9;
+$text-cl-a: #ff0000;
+$text-cl-prim: #000;
+$text-cl-sec: #fff;
+$text-cl-a2: #de8b87;
+$text-cl-sp1: #ae18e2;
+$text-cl-sp2: rgba(0, 0, 0, 0.6);
+$text-cl-sp3: rgba(0, 0, 0, 0.87);
+$text-cl-sp4: rgba(0, 0, 0, 0.95);
+$text-cl-1: #dd2aed;
+// background color
+$bg-cl-sp1: #000;
+$bg-cl-sp2: #dedddc;
+$bg-cl-sp3: #fff;
+$bg-cl-sp4: #f8f8f8;
+$bg-cl-sp5: #d9d9d9;
+// button bg color
+$btn-cl-1: #e1b067;
+$btn-cl-2: #dedddc;
+$btn-cl-3: #fff;
+$btn-cl-4: #ae18e2;
+$btn-cl-5: #6200ee;
+$btn-cl-6: #1877f2;
+$btn-cl-7: #372083;
+$btn-cl-8: #f2994a;
+$btn-cl-9: #c27837;
+$btn-cl-10: rgba(33, 33, 33, 0.08);
+//bordercolor
+$bd-cl-1: #ae18e2;
+//form check color
+$fr-cl-check1: #d9d9d9;
+//dot color
+$dot-cl-prim: rgba(98, 0, 238, 0.04);
+//dot border color
+$dotbd-cl-prim: rgba(98, 0, 238, 0.04);
+//------------------
+@mixin text($fs: $text-base, $fw: $text-light, $c: $text-cl-prim) {
+  font-size: $fs;
+  font-weight: $fw;
+  color: $c;
+}
+@mixin button($bg, $pd, $bd, $fs, $fw, $c, $bg-hover, $c-hover) {
+  background: $bg;
+  padding: $pd;
+  border: $bd;
+  font-size: $fs;
+  font-weight: $fw;
+  color: $c;
+  &:hover {
+    background: $bg-hover;
+    color: $c-hover;
+  }
+}
+//------------------

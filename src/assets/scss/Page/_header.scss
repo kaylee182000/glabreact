@@ -1,0 +1,76 @@
+.header {
+  padding-top: 15px;
+  background-color: $bg-cl-sp1;
+  .header-content {
+    padding-bottom: 15px;
+    .logo {
+      img {
+        width: auto;
+      }
+    }
+    .user-section {
+      .search {
+        img {
+          width: 33px;
+          height: 33px;
+          margin-right: 5px;
+        }
+        .search-link {
+          display: inline-block;
+          transform: translateY(5px);
+          transition: all 0.5s;
+          border-radius: 5px;
+          padding: 0 5px;
+          @include text($text-l, $text-light, $text-cl-sec);
+          &:hover {
+            background-color: $bg-cl-sp3;
+            @include text($text-l, $text-light, $text-cl-prim);
+          }
+        }
+      }
+      .cart {
+        @include text($text-l, $text-light, $text-cl-sec);
+        min-width: 100px;
+        display: inline-block;
+        text-align: right;
+        transform: translateY(5px);
+        img {
+          width: auto;
+          transform: translateY(-5px);
+        }
+        .amount-item {
+          min-width: 55px;
+          display: inline-block;
+          text-align: right;
+        }
+      }
+      .button-area {
+        a {
+          @include text($text-sm, $text-light, $text-cl-sec);
+          transition: all 0.5s;
+          &:hover {
+            background-color: $bg-cl-sp3;
+            @include text($text-sm, $text-light, $text-cl-prim);
+          }
+        }
+      }
+    }
+  }
+  .navbarShop {
+    background-color: $bg-cl-sp3;
+    padding: 15px 0;
+    .nav {
+      transition: all 0.5s;
+      a {
+        @include text();
+        opacity: 0.7;
+        border-bottom: none;
+        &.active,
+        &:hover {
+          border-bottom: 1px solid #000;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
