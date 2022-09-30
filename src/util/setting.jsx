@@ -124,3 +124,16 @@ http.interceptors.response.use(
     return Promise.reject(err);
   }
 );
+export const randomProductItem = (arr, quantity) => {
+  let newArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    let k = Math.floor(Math.random() * arr.length);
+    if (!newArr.includes(arr[k]) && newArr.length < quantity) {
+      newArr.push(arr[k]);
+    }
+    if (newArr.length === quantity) {
+      break;
+    }
+  }
+  return newArr;
+};
